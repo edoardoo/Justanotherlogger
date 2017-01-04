@@ -15,9 +15,8 @@
   angular.module('logger',
       [
           'logger.config',
-          'logger.services',
-          '$rootS   cope'
-      ]).factory('logger', [ '$rootScope', function ( $rootScope ) {
+          'logger.services'
+      ]).factory('logger', [  function ( ) {
 
     var log = this;
     log.active = true;
