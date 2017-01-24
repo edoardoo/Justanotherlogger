@@ -1,22 +1,4 @@
-(function (angular) {
-
-  // Create all modules and define dependencies to make sure they exist
-  // and are loaded in the correct order to satisfy dependency injection
-  // before all nested files are concatenated by Gulp
-
-  // Config
-  angular.module('logger.config', [])
-      .value('logger.config', {
-          debug: true
-      });
-
-  // Modules
-  angular.module('logger.services', []);
-  angular.module('logger',
-      [
-          'logger.config',
-          'logger.services'
-      ]).factory('logger', [  function ( ) {
+var log = function(){
 
     var log = this;
     log.active = true;
@@ -38,6 +20,7 @@
     // log.cssBold = 'font-weight: bold'
 
     log.getColour = function( section ){
+
         var colour = null;
         if( typeof( log.coloursSections[section]) === 'undefined' ){
             colour = log.colours[ log.index ];
@@ -48,17 +31,21 @@
 
         colour = log.coloursSections[section].colour;
         return colour;
+
     };
 
     log.increaseIndex = function(){
+
         if( log.index + 1 > log.colours.length -1){
             log.index = 0;
         }else{
             log.index++;
         }
+
     };
 
     log.debug = function( section, message, data ){
+
         if( log.active ){
             var time = '';
             var colour = log.getColour(section);
@@ -73,9 +60,11 @@
                 console.dir(data);
             }
         }
+
     };
 
     log.error = function( section, message , e){
+
         if( log.active ){
 
             console.log(  log.getTime()+ '%c Error in ' + section + ': ' + message, log.cssError );
@@ -84,18 +73,22 @@
                 console.dir(e);
             }
         }
+
     };
 
     log.getTime = function(){
+
         return new Date().getTime();
+
     };
 
     return {
+
         debug: log.debug,
         error: log.error
+
     };
 
-}]);
+};
 
-
-})(angular);
+log = log();
