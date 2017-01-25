@@ -16,11 +16,11 @@ Here are some code lines:
 
 ... that will get you:
 
-![Example 1](screenshots/log1.png)  
+![Example 1](https://github.com/edoardoo/justanotherlogger/blob/master/screenshots/log1.png)  
 
-![Example 2](screenshots/log2.png)  
+![Example 2](https://github.com/edoardoo/justanotherlogger/blob/master/screenshots/log2.png)  
 
-![Example 3](screenshots/log3.png)  
+![Example 3](https://github.com/edoardoo/justanotherlogger/blob/master/screenshots/log3.png)  
 
 Wanna use it?
 
