@@ -3,21 +3,20 @@ var log = function(){
     var log = this;
     log.active = true;
     log.addTime = false;
-    log.cssError = 'color: #e74c3c;';
+    log.cssError = 'color: #d24436;';
     log.coloursSections = {};
     log.index = 0;
     log.colours = [
-        '#898CFF',
-        '#FF89B5',
-        '#FFDC89',
-        '#90D4F7',
-        '#72E096',
-        '#F5A26F',
-        '#668DE5',
-        '#ED6D79',
-        '#CFF381',
-        '#68EEBD'];
-    // log.cssBold = 'font-weight: bold'
+        '#6769c7',
+        '#cc6d90',
+        '#ceb16e',
+        '#6da1bb',
+        '#5aad75',
+        '#ca865c',
+        '#5373b9',
+        '#bd5862',
+        '#a6c368',
+        '#50b590'];
 
     log.getColour = function( section ){
 
